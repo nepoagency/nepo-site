@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<div class="article-header">
+  <div class="hero-eyebrow">{{ categoria }}</div>
+  <h1>{{ title }}</h1>
+  <div class="article-meta">{{ date | fecha }}</div>
+</div>
+
+{% if imagen %}
+<img class="article-cover" src="{{ imagen }}" alt="{{ title }}">
+{% endif %}
+
+<div class="article-body">
+  {{ content | safe }}
+</div>

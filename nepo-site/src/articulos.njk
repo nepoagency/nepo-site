@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Artículos — Nepo Agency
+permalink: /articulos/index.html
+---
+<div class="section-label" style="padding-top: 60px;">
+  <span>Todos los artículos</span>
+</div>
+
+<div class="grid">
+  {% for articulo in collections.articulos | reverse %}
+  <a href="{{ articulo.url }}" style="color: inherit;" class="js-card" data-categoria="{{ articulo.data.categoria }}">
+    <div class="card-image">
+      {% if articulo.data.imagen %}
+        <img src="{{ articulo.data.imagen }}" alt="{{ articulo.data.title }}">
+      {% else %}
+        Imagen
+      {% endif %}
+    </div>
+    <div class="card-category">{{ articulo.data.categoria }}</div>
+    <div class="card-title">{{ articulo.data.title }}</div>
+    <div class="card-excerpt">{{ articulo.data.resumen }}</div>
+  </a>
+  {% endfor %}
+</div>
+
+<script>
+  // Filtro simple por categoría via ?categoria=Nombre en la URL
+  const params = new URLSearchParams(window.location.search);
+  const categoria = params.get('categoria');
+  if (categoria) {
+    document.querySelectorAll('.js-card').forEach(function (card) {
+      if (card.dataset.categoria !== categoria) {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>

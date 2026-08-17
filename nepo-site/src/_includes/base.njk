@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title or "Nepo Agency" }}</title>
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="header-top">
+      <a class="logo-link" href="/"><img src="/assets/images/logo.png" alt="Nepo Agency"></a>
+      <div class="header-icons">
+        <span>Buscar</span>
+        <a href="/contacto/">Contacto</a>
+      </div>
+    </div>
+    <nav>
+      <a href="/articulos/?categoria=Cultura digital">Cultura digital</a>
+      <a href="/articulos/?categoria=Signals">Signals</a>
+      <a href="/articulos/?categoria=Internet people">Internet people</a>
+      <a href="/articulos/?categoria=Random">Random</a>
+      <a href="/articulos/?categoria=Moda">Moda</a>
+      <a href="/articulos/?categoria=Nepo">Nepo</a>
+    </nav>
+  </header>
+
+  {{ content | safe }}
+
+  <footer style="flex-direction: column; align-items: center; gap: 12px;">
+    <div>&copy; {{ currentYear }} Nepoagency<br>Todos los derechos reservados</div>
+  </footer>
+
+</div>
+</body>
+</html>

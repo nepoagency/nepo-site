@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Nepo Agency
+---
+{% set ultimos = collections.articulos | reverse %}
+{% set destacado = ultimos[0] %}
+
+<section class="hero">
+  <div class="hero-image">
+    {% if destacado.data.imagen %}
+      <img src="{{ destacado.data.imagen }}" alt="{{ destacado.data.title }}">
+    {% else %}
+      Imagen destacada
+    {% endif %}
+  </div>
+  <div>
+    <div class="hero-eyebrow">Artículo destacado — {{ destacado.data.categoria }}</div>
+    <h1>{{ destacado.data.title }}</h1>
+    <p>{{ destacado.data.resumen }}</p>
+    <a class="btn" href="{{ destacado.url }}">Leer artículo</a>
+  </div>
+</section>
+
+<div class="section-label">
+  <span>Últimos artículos</span>
+  <a href="/articulos/">Ver todos &rarr;</a>
+</div>
+
+<div class="grid">
+  {% for articulo in ultimos | slice(1, 5) %}
+  <a href="{{ articulo.url }}" style="color: inherit;">
+    <div class="card-image">
+      {% if articulo.data.imagen %}
+        <img src="{{ articulo.data.imagen }}" alt="{{ articulo.data.title }}">
+      {% else %}
+        Imagen
+      {% endif %}
+    </div>
+    <div class="card-category">{{ articulo.data.categoria }}</div>
+    <div class="card-title">{{ articulo.data.title }}</div>
+    <div class="card-excerpt">{{ articulo.data.resumen }}</div>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="display" style="text-align: center; margin: 60px 32px 20px; font-size: 28px;">Nepo letter</div>
+<p style="text-align: center; opacity: 0.75; font-size: 13px; max-width: 480px; margin: 0 auto 40px;">
+  Ideas, análisis y perspectivas sobre marca, diseño y estrategia — directo desde el estudio.
+</p>

@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "articulos"
+    label: "Artículos"
+    folder: "src/articulos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - label: "Categoría"
+        name: "categoria"
+        widget: "select"
+        options: ["Cultura digital", "Signals", "Internet people", "Random", "Moda", "Nepo"]
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Resumen", name: "resumen", widget: "text" }
+      - { label: "Imagen de portada", name: "imagen", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }

@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Contacto — Nepo Agency
+permalink: /contacto/index.html
+---
+<div class="contact">
+  <h1>Hablemos</h1>
+  <p>¿Tienes un proyecto en mente? Cuéntanos qué necesitas y te contactamos en menos de 48 horas.</p>
+
+  <form class="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contacto">
+    <p class="hidden" style="display:none;">
+      <label>No llenar si eres humano: <input name="bot-field"></label>
+    </p>
+    <div>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="tu@email.com" required>
+    </div>
+    <div>
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+    </div>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+</div>
