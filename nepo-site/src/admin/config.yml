@@ -16,7 +16,7 @@ collections:
       - label: "Categoría"
         name: "categoria"
         widget: "select"
-        options: ["Cultura digital", "Signals", "Internet people", "Random", "Moda", "Nepo"]
+        options: ["Cultura digital", "Moda", "Creatividad", "Signals", "Internet people", "Random"] 
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Resumen", name: "resumen", widget: "text" }
       - { label: "Imagen de portada", name: "imagen", widget: "image", required: false }
