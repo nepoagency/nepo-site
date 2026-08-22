@@ -6,7 +6,7 @@ resumen: >-
   NEPO SIGNALS 001 / LA ERA POST-INFLUENCER
 
 
-  ¿Estamos viendo el principio de una nueva forma de influencia o simplemente otra transformación del mismo sistema?
+  ¿Estamos viendo el principio de una nueva forma de influencia o simplemente otra transformación del mismo sistema?.
 imagen: /assets/images/uploads/copia-de-lo-cool-1-.jpg
 ---
 A veces nos gusta hacer futurología, adivinar qué viene, qué estética dominará o qué plataforma será la próxima en ser relevante.
