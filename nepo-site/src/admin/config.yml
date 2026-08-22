@@ -20,4 +20,5 @@ collections:
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Resumen", name: "resumen", widget: "text" }
       - { label: "Imagen de portada", name: "imagen", widget: "image", required: false }
+      - { label: "Imagen banner (artículo completo)", name: "imagen_banner", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
