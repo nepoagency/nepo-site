@@ -18,6 +18,13 @@ module.exports = function (eleventyConfig) {
     return `${d.getDate()} de ${meses[d.getMonth()]}, ${d.getFullYear()}`;
   });
 
+  // El filtro "slice" de Nunjucks NO funciona como slice() de JavaScript.
+  // Este filtro nuevo sí recorta el arreglo como esperamos (desde, hasta).
+  eleventyConfig.addFilter("limit", function (arr, start, end) {
+    if (!Array.isArray(arr)) return [];
+    return arr.slice(start, end);
+  });
+
   return {
     dir: {
       input: "src",
