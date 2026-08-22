@@ -2,13 +2,13 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "src/assets/images/uploads"
+media_folder: "nepo-site/src/assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
 collections:
   - name: "articulos"
     label: "Artículos"
-    folder: "src/articulos"
+    folder: "nepo-site/src/articulos"
     create: true
     slug: "{{slug}}"
     fields:
